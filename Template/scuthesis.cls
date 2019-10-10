@@ -101,8 +101,11 @@
 \setcounter{secnumdepth}{4}
 % CTEX设置各级标题对齐方式，字号，字体及前后段间距
 % “章节”标题，小三号黑体，左对齐，前后段间距为10pt
+
 \CTEXsetup[
-	format+={\zihao{-3}\rm\heiti\flushleft},
+name={,},
+number={\arabic{chapter}},
+format+={\zihao{-3}\rm\heiti\flushleft},
 	beforeskip={-1cm},
 	afterskip={10pt}
 ]{chapter}
