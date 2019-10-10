@@ -271,7 +271,7 @@ format+={\zihao{-3}\rm\heiti\flushleft},
 		\begin{center}
 			\zihao{-2}\songti{\@title} \\[0.5cm]
 			\zihao{-4}
-			{\heiti{{\label@major}{：}}}{\kaishu{\@major}} \\[0.5cm]
+			{\songti{{\@major}{\label@major}}} \\[0.5cm]
 			{\heiti{{\CHSauthortype}{：}}}{\kaishu{\@author}}
 			\quad
 			{\heiti{{\label@supervisor}{：}}}{\kaishu{\@supervisor}}
@@ -282,7 +282,6 @@ format+={\zihao{-3}\rm\heiti\flushleft},
 	{
 		\vspace{1em}\par
 		\noindent\textbf{关键词：}\@keywords
-		%\putonbottom{\textbf{关键词：}\@keywords}
 	}
 	% 定义英文摘要环境
 	\newenvironment{ENGabstract}
