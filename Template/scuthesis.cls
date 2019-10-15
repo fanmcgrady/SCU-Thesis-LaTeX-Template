@@ -28,13 +28,18 @@
 \setlength{\topskip}{-0.7cm}
 
 % 设定页眉、页脚样式。
+%  E 偶数页
+%• O 奇数页
+%• L 页眉或页脚的左边部分
+%• C 页眉或页脚的中间部分
+%• R 页眉或页脚的右边部分
+%• H 页眉
+%• F 页脚
 %\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}}
 \fancypagestyle{plain}{\pagestyle{fancy}}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[RE]{\zihao{-5}\songti\@title}
-\fancyhead[RO]{\zihao{-5}\songti\@title}
-\fancyhead[LO,LE]{\zihao{-5}\songti\universityname\thesisname}
+\fancyhead[CE,CO]{\zihao{-5}\songti\universityname\thesisname}
 \fancyfoot[CO,CE]{\zihao{-5}\thepage}
 
 % 使用epstopdf宏包重定向eps输出路径，避免图片错误
@@ -101,12 +106,13 @@
 \setcounter{secnumdepth}{4}
 % CTEX设置各级标题对齐方式，字号，字体及前后段间距
 % “章节”标题，小三号黑体，左对齐，前后段间距为10pt
-
 \CTEXsetup[
 name={,},
 number={\arabic{chapter}},
-format+={\zihao{-3}\rm\heiti\flushleft},
-	beforeskip={-1cm},
+nameformat={\flushleft},
+titleformat={\zihao{-3}\rm\heiti},
+numberformat={\zihao{-3}\rm\heiti},
+beforeskip={-1cm},
 	afterskip={10pt}
 ]{chapter}
 % “节”标题，四号黑体，左对齐，前后段间距为10pt
@@ -236,18 +242,6 @@ format+={\zihao{-3}\rm\heiti\flushleft},
 		\thispagestyle{empty}
 	}
 
-	% 重定义autoref标签
-	%\renewcommand{\partautorefname}{\part}
-	%\renewcommand{\figureautorefname}{\figurename}
-	%\renewcommand{\tableautorefname}{\tablename}
-	%\renewcommand{\appendixautorefname}{\appendixname}
-	%\renewcommand{\equationautorefname}{\equationname}
-	%\renewcommand{\Itemautorefname}{\Itemname}
-
-	%\newcommand{\equationname}{式}
-	%\renewcommand{\equationautorefname}{\equationname}
-
-	% 定义\specialchap命令，生成没有编号的章节。从pkuthss-1.2beta保留，本模版中未使用。
 	\newcommand{\specialchap}[1]{
 		\chapter*{#1}\markboth{#1}{}
 		\addcontentsline{toc}{chapter}{#1}\phantomsection
