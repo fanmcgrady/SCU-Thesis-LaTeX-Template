@@ -111,7 +111,10 @@
 \CTEXsetup[
 	format+={\zihao{-3}\rm\heiti\flushleft},
 	beforeskip={-1cm},
-	afterskip={10pt}
+	afterskip={10pt},
+	% 修改章节样式，第一章——>1
+	name={},
+	number={\thechapter},
 ]{chapter}
 % “节”标题，四号黑体，左对齐，前后段间距为10pt
 \CTEXsetup[
