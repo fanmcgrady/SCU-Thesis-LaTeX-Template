@@ -24,6 +24,3 @@
 
 ## 寄语
 建议不要太多的关注模板的细节，能否毕业关键还是看论文的实际工作内容，大家加油！
-
-## 封面效果
-![Cover Preview](/Images/title.png "Cover Preview")
